@@ -1,5 +1,6 @@
 require 'mongoid'
 require 'stringex'
+require 'mongoid/slug/embedded'
 
 module Mongoid
   # The Slug module helps you generate a URL slug or permalink based on one or
