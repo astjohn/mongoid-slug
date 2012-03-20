@@ -112,7 +112,7 @@ module Mongoid
           def self.find(*args)
             if args.first.is_a?(String)
               begin
-                obj_id = BSON::ObjectId.from_string(args.first)
+                BSON::ObjectId.from_string(args.first)
                 super
               rescue BSON::InvalidObjectId
                 find_by_#{slug_name}!(args.first)
