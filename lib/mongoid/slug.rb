@@ -113,12 +113,12 @@ module Mongoid
             if args.first.is_a?(String)
               begin
                 obj_id = BSON::ObjectId.from_string(args.first)
-                super(*args)
+                super
               rescue BSON::InvalidObjectId
                 self.find_by_#{slug_name}!(args.first)
               end
             else
-              super(*args)
+              super
             end
           end
         CODE
